@@ -168,10 +168,14 @@
   color: var(--text-color, #353430);
 }
 
-.content__paragraph:not(:last-child) {
+.content__paragraph {
   align-items: flex-start;
   color: var(--text-color, #353430);
   line-height: 23.40px;
+  padding-block-end: 25px;
+}
+
+.content__paragraph:not(:last-child) {
   padding-block-end: 25px;
 }
 
