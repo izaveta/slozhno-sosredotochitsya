@@ -17,17 +17,8 @@
   --subtitle-color: #000028;
   --accent-color: #DB00FF;
   --accent-color-shadow: #FF0070;
-}
-
-:root.theme-dark {
-  --main-font: 'IBM Plex Mono';
-  --main-font-size: 18px;
-  --bg-image: url(../images/cover-image-dark.png);
-  --bg-color: #FF0070;
-  --text-color: #F1B2CE;
-  --subtitle-color: #000028;
-  --accent-color: #DB00FF;
-  --accent-color-shadow: #FF0070;
+  --accent-color-shadow-tr: rgba(255, 0, 112, 0.5);
+  --bg-color-page: #000028;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -40,40 +31,8 @@
       --text-color: #F1B2CE;
       --subtitle-color: #000028;
       --accent-color: #DB00FF;
-      --accent-color-shadow: #FF0070;  
+      --accent-color-shadow: #FF0070;
+      --accent-color-shadow-tr: rgba(255, 0, 112, 0.5);  
+      --bg-color-page: #000028;
     }
-
-    .header__rec.theme_dark {
-      position: absolute;
-      color: var(--accent-color-shadow);
-      font-size: var(--main-font-size);
-      line-height: 100%;
-      text-transform: uppercase;
-      inset-inline-end: 40px;
-      inset-block-start: 22px;
-    }
-}
-
-.header__rec {
-  position: absolute;
-  color: var(--accent-color-shadow);
-  font-size: var(--main-font-size);
-  line-height: 100%;
-  text-transform: uppercase;
-  inset-inline-end: 46px;
-  inset-block-start: 26px;
-}
-
-
-.header__rec::after {
-  content: '';
-  position: absolute;
-  inline-size: 10px;
-  block-size: 10px;
-  margin: -5px -17px -5px 0;
-  border-radius: 50%;
-  box-shadow: 0 0 4px 2px var(--accent-color-shadow);
-  background-color: var(--accent-color-shadow);
-  inset-inline-end: 0;
-  inset-block-end: 50%;
 }

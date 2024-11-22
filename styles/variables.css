@@ -10,4 +10,6 @@
   --subtitle-color: #353430;
   --accent-color: #FFC2E6;
   --accent-color-shadow: #353430;
+  --accent-color-shadow-tr: rgba(53, 52, 48, 0.5);
+  --bg-color-page: #fff1f7;
 }
