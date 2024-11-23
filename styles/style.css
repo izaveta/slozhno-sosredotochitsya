@@ -447,7 +447,7 @@
   padding-block-end: 25px;
 }
 
-@media (width <= 768px) {
+@media (width < 768px) {
   .gallery {
       display: flex;
       flex-direction: column;
