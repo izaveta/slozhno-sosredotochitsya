@@ -345,7 +345,7 @@
   margin-block-start: 20px;
 }
 
-@media (width <= 768px) {
+@media (width < 1024px) {
   .causes .text__blocks {
       display: flex;
       flex-direction: column;
