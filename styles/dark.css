@@ -35,4 +35,10 @@
       --accent-color-shadow-tr: rgba(255, 0, 112, 0.5);  
       --bg-color-page: #000028;
     }
+   
+.page.theme_auto {
+  .header__rec {
+      display: block;
+  }
+}
 }

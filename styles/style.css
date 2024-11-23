@@ -29,6 +29,7 @@
   min-block-size: 668px;
   align-items: start;
   padding-inline: 20px;
+  position: relative;
 }
 
 @media (width <= 768px) {
@@ -120,18 +121,6 @@
   background-color: var(--accent-color-shadow);
   inset-inline-end: 0;
   inset-block-end: 50%;
-}
-
-@media (prefers-color-scheme: dark) {
-  .header__rec.theme_dark {
-      position: absolute;
-      color: var(--accent-color-shadow);
-      font-size: var(--main-font-size);
-      line-height: 100%;
-      text-transform: uppercase;
-      inset-inline-end: 40px;
-      inset-block-start: 22px;
-  }
 }
 
 .header__theme-menu {
@@ -501,4 +490,8 @@
   .footer__heading {
       font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
+}
+
+*{
+  border: 1px solid red;
 }
