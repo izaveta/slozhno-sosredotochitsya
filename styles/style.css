@@ -267,9 +267,11 @@
   gap: 20px;
 }
 
-@media (width <= 768px) {
+@media (width < 768px) {
   .content-section {
       gap: 40px;
+      display: flex;
+      flex-direction: column;
   }
 }
 
@@ -288,6 +290,12 @@
   max-width: 315px;
   color: var(--accent-color-shadow, #353430);
   margin: 0;
+}
+
+@media (width <= 768px) { 
+  .content__title {
+    max-width: 100vh;
+  }
 }
 
 @media (width <= 375px) { 
@@ -517,4 +525,3 @@
       font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
 }
-
