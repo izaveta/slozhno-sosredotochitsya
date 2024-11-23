@@ -26,10 +26,11 @@
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   block-size: 100vh;
-  min-block-size: 668px;
+  min-block-size: 768px;
   align-items: start;
   padding-inline: 20px;
   position: relative;
+  gap: 105px;
 }
 
 @media (width <= 768px) {
@@ -44,9 +45,9 @@
       display: flex;
       flex-direction: column;
       gap: 48px;
-      padding-inline-start: 0px;
-      margin-block-end: 0px;
-      padding-block-end: 0px;
+      padding-inline: 0;
+      margin-block: 0;
+      min-block-size: 668px;
   }
 }
 
@@ -89,13 +90,13 @@
 @media (width <= 375px) {
   .decorated-zone::before {
       inset-block-start: 10px;
-      inset-inline-end: 10px;
+      inset-inline-end: 0;
   }
 }
 
 @media (width <= 375px) {
   .decorated-zone::after {
-      inset-inline-start: 10px;
+      inset-inline-start: 0;
       inset-block-end: 10px;
   }
 }
@@ -125,7 +126,6 @@
 
 .header__theme-menu {
   justify-self: center;
-  margin-inline-start: -40px;
 }
 
 @media (width <= 768px) {
@@ -277,6 +277,7 @@
   .content-section {
       display: flex;
       flex-direction: column;
+      gap: 0px;
   }
 }
 
@@ -286,13 +287,30 @@
   line-height: 23.4px;
   max-width: 315px;
   color: var(--accent-color-shadow, #353430);
-  margin: 0px;
+  margin: 0;
 }
 
-@media (width <= 375px) {
-  .content__title {
-      min-width: 355px;
-  }
+@media (width <= 375px) { 
+  .content__title { 
+      min-width: 355px; 
+  } 
+} 
+
+@media (width <= 375px) { 
+  .why .content__title { 
+      margin-block-end: 20px; 
+  } 
+} 
+
+@media (width <= 375px) { 
+  .advices .content__title { 
+      margin-block-end: 20px; 
+  } 
+} 
+
+.causes .content-section__title {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
 }
 
 .text__block {
@@ -313,9 +331,10 @@
   }
 }
 
-.causes .content-section__title {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
+@media (width <= 375px) {
+  .advices .text__blocks {
+      margin-block-end: 40px;
+  }
 }
 
 .causes .text__blocks {
@@ -367,13 +386,15 @@
   word-spacing: 10px;
 }
 
-.advices .heading__paragraph {
-  margin-block-end: 0px;
-}
-
 @media (width <=768px) {
   .advices .heading__accent {
       margin-block-end: 20px;
+  }
+}
+
+@media (width <=375px) {
+  .advices .heading__accent {
+      margin-block-end: 0px;
   }
 }
 
@@ -390,9 +411,14 @@
   line-height: 23.4px;
 }
 
+.advices .heading__paragraph {
+  margin-block-end: 0;
+  margin-block-start: 24px;
+}
+
 @media (width <=768px) {
-  .heading__paragraph {
-      margin-block-start: 20px;
+  .advices .heading__paragraph {
+    margin-block-start: 20px;
   }
 }
 
@@ -469,12 +495,12 @@
   justify-content: center;
   padding-inline: 10px;
   position: relative;
+  min-block-size: 768px;
 }
 
 @media (width <= 375px) {
   .footer {
-      block-size: 668px;
-      margin-inline-end: 20px;
+      min-block-size: 668px;
   }
 }
 
